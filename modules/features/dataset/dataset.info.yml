@@ -1,0 +1,24 @@
+name: Dataset
+description: 'Provides Dataset tipo di contenuto and related configuration. Struttura delle informazioni relative utili a presentare un Dataset'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - datetime
+  - entity_reference_revisions
+  - field
+  - file
+  - image
+  - language
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user
+  - views

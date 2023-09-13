@@ -1,0 +1,16 @@
+name: 'Accesso al servizio'
+description: 'Provides Accesso al servizio tipo di contenuto and related configuration. Modalità di accesso al servizio.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - scheduler
+  - taxonomy
+  - text
+  - type_tray
+  - user

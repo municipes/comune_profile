@@ -1,0 +1,23 @@
+name: Luogo
+description: 'Provides Luogo tipo di contenuto and related configuration. Tipologia che struttura le informazioni relative a un luogo di interesse pubblico.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - address
+  - entity_reference_revisions
+  - field
+  - geocoder_field
+  - geofield
+  - inline_entity_form
+  - language
+  - leaflet
+  - media_library
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user

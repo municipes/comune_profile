@@ -1,0 +1,16 @@
+name: Incarico
+description: 'Provides Incarico tipo di contenuto and related configuration. Questa Tipologia descrive la struttura di cariche, incarichi o ruoli salienti per il dominio (sito di un comune), funzionale alla creazione di una scheda persona'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - datetime
+  - field
+  - language
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - type_tray
+  - user

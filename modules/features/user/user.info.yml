@@ -1,0 +1,6 @@
+name: Utente
+description: 'Provide Utente related configuration.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - system

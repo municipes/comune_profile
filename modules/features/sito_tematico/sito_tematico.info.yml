@@ -1,0 +1,14 @@
+name: 'Sito Tematico'
+description: 'Provides Sito Tematico tipo di contenuto and related configuration. '
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - language
+  - link
+  - media_library
+  - menu_ui
+  - node
+  - taxonomy
+  - type_tray
+  - user

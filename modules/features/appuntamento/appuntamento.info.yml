@@ -1,0 +1,15 @@
+name: Appuntamento
+description: 'Provides Appuntamento tipo di contenuto and related configuration. Struttura delle informazioni relative utili a presentare un appuntamento.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - datetime
+  - field
+  - language
+  - menu_ui
+  - node
+  - path
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user

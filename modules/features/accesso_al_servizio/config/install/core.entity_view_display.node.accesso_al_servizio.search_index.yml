@@ -1,0 +1,37 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.accesso_al_servizio.field_categoria_del_servizio
+    - field.field.node.accesso_al_servizio.field_descrizione_breve
+    - field.field.node.accesso_al_servizio.field_link
+    - field.field.node.accesso_al_servizio.field_tipo_di_accesso
+    - node.type.accesso_al_servizio
+  module:
+    - user
+id: node.accesso_al_servizio.search_index
+targetEntityType: node
+bundle: accesso_al_servizio
+mode: search_index
+content:
+  field_categoria_del_servizio:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_descrizione_breve: true
+  field_link: true
+  field_tipo_di_accesso: true
+  langcode: true
+  node_read_time: true
+  search_api_excerpt: true

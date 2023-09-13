@@ -1,0 +1,16 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  module:
+    - media
+    - node
+    - path
+    - pathauto
+    - system
+    - taxonomy
+id: editor
+label: Redattore
+weight: 11
+is_admin: null

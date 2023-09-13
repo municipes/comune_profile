@@ -1,0 +1,49 @@
+name: Core
+description: 'Provides core components required by other features.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - backup_migrate
+  - block
+  - block_content
+  - color_field
+  - content_moderation
+  - contextual
+  - crop
+  - datetime
+  - entity_reference_revisions
+  - facets
+  - facets_summary
+  - field
+  - field_group
+  - file
+  - filter
+  - focal_point
+  - image
+  - imce
+  - inline_entity_form
+  - language
+  - link
+  - locale
+  - media
+  - media_library
+  - media_video_micromodal
+  - menu_link_content
+  - node
+  - options
+  - paragraphs
+  - path
+  - path_alias
+  - pathauto
+  - responsive_image
+  - search_api
+  - shortcut
+  - system
+  - taxonomy
+  - text
+  - toolbar
+  - ui_patterns_field_formatters
+  - user
+  - views
+  - views_ui
+  - viewsreference

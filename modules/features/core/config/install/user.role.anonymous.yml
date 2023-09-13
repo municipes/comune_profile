@@ -1,0 +1,10 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - media
+    - system
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false

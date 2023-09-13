@@ -1,0 +1,19 @@
+name: 'Unità organizzativa'
+description: "Provides Unità organizzativa tipo di contenuto and related configuration. Questa Tipologia descrive la struttura di un'organizzazione comunale funzionale alla creazione di contenuti come uffici o altre unità organizzative"
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - inline_entity_form
+  - language
+  - media_library
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user
+  - viewsreference

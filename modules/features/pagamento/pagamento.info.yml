@@ -1,0 +1,13 @@
+name: Pagamento
+description: 'Provides Pagamento tipo di contenuto and related configuration. “Content type utile per l’ implementazione dell’AREA RISERVATA”'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - datetime
+  - field
+  - language
+  - link
+  - menu_ui
+  - node
+  - text
+  - type_tray

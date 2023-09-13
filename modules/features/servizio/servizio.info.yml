@@ -1,0 +1,29 @@
+name: Servizio
+description: 'Provides Servizio tipo di contenuto and related configuration. Struttura delle informazioni relative a un servizio pubblico, funzionale alla creazione di una scheda servizio'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - block
+  - entity_reference_revisions
+  - field
+  - field_group
+  - inline_entity_form
+  - language
+  - link
+  - media
+  - media_library
+  - menu_block
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - scheduler
+  - search_api
+  - system
+  - taxonomy
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user
+  - views

@@ -1,0 +1,15 @@
+name: 'Punto di contatto'
+description: 'Provides Punto di contatto tipo di contenuto and related configuration. Questa Tipologia descrive la struttura di un punto di contatto, che può essere fisico, virtuale o digitale.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - language
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - scheduler
+  - taxonomy
+  - type_tray
+  - user

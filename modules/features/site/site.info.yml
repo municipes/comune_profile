@@ -1,0 +1,12 @@
+name: Sito
+description: 'Provides site components.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - backup_migrate
+  - filter
+  - language
+  - node
+  - system
+  - taxonomy
+  - text

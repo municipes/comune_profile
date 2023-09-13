@@ -1,0 +1,24 @@
+name: 'Persona pubblica'
+description: 'Provides Persona pubblica tipo di contenuto and related configuration. Questa Tipologia descrive la struttura delle persone pubbliche che sono salienti per il dominio (sito di un comune), funzionale alla creazione di una scheda persona.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - auto_entitylabel
+  - datetime
+  - entity_reference_revisions
+  - field
+  - field_group
+  - inline_entity_form
+  - language
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user
+  - views
+  - viewsreference

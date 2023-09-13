@@ -1,0 +1,26 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - backup_migrate
+    - block
+    - contextual
+    - facets
+    - filter
+    - image
+    - imce
+    - language
+    - locale
+    - node
+    - path
+    - pathauto
+    - search_api
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - views_ui
+id: administrator
+label: administrator
+weight: 10
+is_admin: true

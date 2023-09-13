@@ -1,0 +1,17 @@
+name: Faq
+description: 'Provides Faq tipo di contenuto and related configuration. Domande frequenti.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - language
+  - menu_ui
+  - node
+  - path
+  - search_api
+  - search_api_db
+  - system
+  - text
+  - type_tray
+  - user
+  - views

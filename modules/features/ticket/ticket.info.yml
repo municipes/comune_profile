@@ -1,0 +1,11 @@
+name: Ticket
+description: 'Provides Ticket tipo di contenuto and related configuration. Ticket di richiesta assistenza.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - type_tray
+  - user

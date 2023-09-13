@@ -1,0 +1,21 @@
+name: Notizia
+description: 'Provides Notizia tipo di contenuto and related configuration. Tipologia che struttura le informazioni relative agli aggiornamenti d un comune.'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - datetime
+  - entity_reference_revisions
+  - field
+  - inline_entity_form
+  - language
+  - media_library
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - type_tray
+  - ui_patterns_field_formatters
+  - user
+  - views
