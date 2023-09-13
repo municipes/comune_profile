@@ -1,7 +1,0 @@
-langcode: it
-status: true
-dependencies: {  }
-id: con_paragrafi
-label: 'Con paragrafi'
-revision: 0
-description: ''
