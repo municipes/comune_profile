@@ -1,0 +1,148 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the comune installation profile.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\shortcut\Entity\Shortcut;
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
+use Drupal\migrate\MigrationInterface;
+
+/**
+ * Implements hook_requirements().
+ */
+// function comune_profile_requirements($phase) {
+//   $requirements = [];
+
+//   switch ($phase) {
+//     case 'install':
+//       // We don't care how Drupal configures the private file system (e.g.
+//       // through a setting or otherwise), we just care that our `private` uri
+//       // scheme for our file field storages works.
+//       // if (!in_array('private', stream_get_wrappers(), TRUE)) {
+//       //   $requirements['private_file_system'] = [
+//       //     'title' => t('Private File System'),
+//       //     'value' => t('Not configured'),
+//       //     'description' => t('The private file system must be configured for Comune to install. You may opt-out of the private file system for individual fields after installation. See https://www.drupal.org/documentation/modules/file for how to set the file_private_path in your settings.php.'),
+//       //     'severity' => REQUIREMENT_ERROR,
+//       //   ];
+//       // }
+//       break;
+//     case 'runtime'
+//       $profile = \Drupal::installProfile();
+//       $info = \Drupal::service('extension.list.profile')->getExtensionInfo($profile);
+//       $requirements['experimental_profile_used'] = [
+//         'title' => t('Experimental installation profile used'),
+//         'value' => $info['name'],
+//         'description' => t('Experimental profiles are provided for testing purposes only. Use at your own risk. To start building a new site, reinstall Drupal and choose a non-experimental profile.'),
+//         'severity' => REQUIREMENT_WARNING,
+//       ];
+//       break;
+//   }
+
+//   return $requirements;
+// }
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function comune_profile_install() {
+  // Assign user 1 the "administrator" role.
+  /** @var \Drupal\user\Entity\User $user */
+  $user = User::load(1);
+  $user->addRole('administrator');
+  $user->save();
+
+  // We install some menu links, so we have to rebuild the router, to ensure the
+  // menu links are valid.
+  \Drupal::service('router.builder')->rebuildIfNeeded();
+
+  // Populate the default shortcut set.
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Add content'),
+    'weight' => -20,
+    'link' => ['uri' => 'internal:/node/add'],
+  ]);
+  $shortcut->save();
+
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('All content'),
+    'weight' => -19,
+    'link' => ['uri' => 'internal:/admin/content'],
+  ]);
+  $shortcut->save();
+
+  // Enable empty front page module
+  \Drupal::service('module_installer')->install(['bootstrap_italia_empty_front_page'], TRUE);
+  // Enable import taxonomy module
+  \Drupal::service('module_installer')->install(['lexicum_collatio'], TRUE);
+  // Enable import taxonomy module
+  \Drupal::service('module_installer')->install(['navigatio'], TRUE);
+  // Enable import taxonomy module
+  \Drupal::service('module_installer')->install(['theca'], TRUE);
+
+  // Import sub paragraph
+  comune_profile_execute_migrations(['paragraph_sub']);
+  // Import paragraph
+  comune_profile_execute_migrations(['paragraph_common']);
+  // Import block
+  comune_profile_execute_migrations(['block_common']);
+  // Import taxonomy
+  comune_profile_execute_migrations(['taxonomy_common']);
+  comune_profile_execute_migrations(['taxonomy_simple']);
+  // Import node
+  comune_profile_execute_migrations(['node_common']);
+  // Import menu
+  comune_execute_migrations(['menu_common']);
+
+
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.block_common')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.paragraph_common')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.comune_block')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.menu_common')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.node_common')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.taxonomy_common')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.comune_node')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.comune_taxonomy')->delete();
+
+  \Drupal::service('module_installer')->uninstall(['theca']);
+  \Drupal::service('module_installer')->uninstall(['navigatio']);
+  \Drupal::service('module_installer')->uninstall(['lexicum_collatio']);
+
+  // Enable the demo content module. This can't be specified as a dependency
+  // in the comune.info.yml file, as it requires configuration provided by
+  // the profile (fields etc.).
+  // \Drupal::service('module_installer')->install(['comune_content'], TRUE);
+}
+
+/**
+ * Execute migrations
+ *
+ * @param array $migration_ids
+ * @return void
+ */
+function comune_profile_execute_migrations(array $migration_ids) {
+  $manager = Drupal::service('plugin.manager.migration');
+  foreach ($migration_ids as $migration_id) {
+    $migration = $manager->createInstance($migration_id);
+    // update existing entity imported.
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+
+    try {
+      // Run the migration.
+      $executable->import();
+    } catch (\Exception $e) {
+      $migration->setStatus(MigrationInterface::STATUS_IDLE);
+    }
+  }
+}

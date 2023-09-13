@@ -1,0 +1,163 @@
+uuid: 1e711b8c-8ecc-46e3-a758-e706cdb78395
+id: paragraph_common
+label: Paragrafi
+migration_group: comune_block
+migration_tags:
+  - json
+  - comune
+  - paragraph
+  - paragraph_common
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+
+  headers:
+    Accept: 'application/json; charset=utf-8'
+    Content-Type: 'application/json'
+
+  # The data_parser normally limits the fields passed on to the source plugin
+  # to fields configured to be used as part of the migration. To support more
+  # dynamic migrations, the JSON data parser supports including the original
+  # data for the current row. Simply include the 'include_raw_data' flag set
+  # to `true` to enable this. This option is disabled by default to minimize
+  # memory footprint for migrations that do not need this capability.
+  # include_raw_data: false
+
+  # Flags whether to track changes to incoming data. If TRUE, we will maintain
+  # hashed source rows to determine whether incoming data has changed.
+  # track_changes: false
+
+  urls:
+    - 'https://municipes.github.io/origo/block/paragraphs.json'
+    - 'https://municipes.github.io/origo/node/paragraphs.json'
+
+  # An xpath-like selector corresponding to the items to be imported.
+  item_selector: data
+
+  fields:
+    - name: id
+      label: 'ID blocco'
+      selector: id
+    - name: revision_id
+      label: 'ID blocco: revisione'
+      selector: revision_id
+    - name: uuid
+      label: 'UUID blocco'
+      selector: uuid
+    - name: type
+      label: 'Tipo di paragrafo'
+      selector: type
+    - name: title
+      label: 'Campo titolo'
+      selector: attributes/title
+    - name: settings
+      label: 'Paragrafo settings'
+      selector: attributes/settings
+    - name: args
+      label: 'TID argomenti'
+      selector: attributes/args
+    - name: view_id
+      label: 'View:ID'
+      selector: attributes/view_id
+    - name: view_display
+      label: 'View: display'
+      selector: attributes/view_display
+    - name: view_data
+      label: 'View: data'
+      selector: attributes/view_data
+    - name: link_url
+      label: 'Link: URI'
+      selector: attributes/link_url
+    - name: link_title
+      label: 'Link: title'
+      selector: attributes/link_title
+    - name: data_element
+      label: 'data Element'
+      selector: attributes/data_element
+    - name: parent_type
+      label: 'Tipo contenuto padre'
+      selector: attributes/parent_type
+    - name: parent_field_name
+      label: 'Nome campo padre'
+      selector: attributes/parent_field_name
+    - name: parent_id
+      label: 'ID entità padre'
+      selector: attributes/parent_id
+
+  ids:
+    id:
+      type: integer
+
+process:
+  id: id
+  revision_id: revision_id
+  uuid: uuid
+  field_title:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: title
+  field_argomento:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: args
+  field_contenuti:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: args
+
+  field_vista_da_visualizzare/target_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: view_id
+  field_vista_da_visualizzare/display_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: view_display
+  field_vista_da_visualizzare/data:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: view_data
+  field_call_to_action/uri: link_url
+
+  field_call_to_action/title: link_title
+
+  field_data_element: data_element
+
+  field_settings:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: settings
+    -
+      plugin: migration_lookup
+      migration: paragraph_sub
+    -
+      plugin: sub_process
+      process:
+        target_id: '0'
+        target_revision_id: '1'
+  parent_type: parent_type
+  parent_field_name: parent_field_name
+  parent_id: parent_id
+  type: type
+
+destination:
+  plugin: entity_reference_revisions:paragraph
+  # default_bundle: argomenti_in_evidenza
+
+migration_dependencies:
+  required:
+    - paragraph_sub
+
+dependencies:
+  enforced:
+    module:
+      - theca
