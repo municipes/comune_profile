@@ -134,6 +134,8 @@ install:
   - ui_patterns_settings:ui_patterns_settings
   - viewsreference:viewsreference
   # Comune Profile
+  - comune_profile:taxonomies
+  - comune_profile:media_types
   - comune_profile:accesso_al_servizio
   - comune_profile:core
   - comune_profile:dataset
