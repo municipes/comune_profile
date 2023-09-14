@@ -37,6 +37,7 @@ dependencies:
   - 'facets:facets'
   - 'facets:facets_summary'
   - 'field_group:field_group'
+  - 'focal_point:focal_point'
   - 'geofield:geofield'
   - 'imce:imce'
   - 'paragraphs:paragraphs'

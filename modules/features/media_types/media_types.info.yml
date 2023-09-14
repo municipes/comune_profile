@@ -13,7 +13,5 @@ dependencies:
   - 'drupal:text'
   - 'drupal:user'
   - 'drupal:views'
-  - 'focal_point:focal_point'
-  - 'imce:imce'
   - 'media_video_micromodal:media_video_micromodal'
 version: 1.0.0
