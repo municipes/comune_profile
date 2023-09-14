@@ -134,23 +134,23 @@ install:
   - ui_patterns_settings:ui_patterns_settings
   - viewsreference:viewsreference
   # Comune Profile
-  # - comune_profile:accesso_al_servizio
-  # - comune_profile:core
-  # - comune_profile:dataset
-  # - comune_profile:documento_pubblico
-  # - comune_profile:evento
-  # - comune_profile:faq
-  # - comune_profile:incarico
-  # - comune_profile:luogo
-  # - comune_profile:notizia
-  # - comune_profile:pagina
-  # - comune_profile:persona
-  # - comune_profile:punto_di_contatto
-  # - comune_profile:servizio
-  # - comune_profile:site
-  # - comune_profile:sito_tematico
-  # - comune_profile:unita_organizzativa
-  # - comune_profile:user
+  - comune_profile:accesso_al_servizio
+  - comune_profile:core
+  - comune_profile:dataset
+  - comune_profile:documento_pubblico
+  - comune_profile:evento
+  - comune_profile:faq
+  - comune_profile:incarico
+  - comune_profile:luogo
+  - comune_profile:notizia
+  - comune_profile:pagina
+  - comune_profile:persona
+  - comune_profile:punto_di_contatto
+  - comune_profile:servizio
+  - comune_profile:site
+  - comune_profile:sito_tematico
+  - comune_profile:unita_organizzativa
+  - comune_profile:user
   # Comune
   - scaenographia:bi_calendar
   - scaenographia:bi_contacts
