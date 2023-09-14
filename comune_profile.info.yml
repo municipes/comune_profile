@@ -133,26 +133,6 @@ install:
   - ui_patterns:ui_patterns_library
   - ui_patterns_settings:ui_patterns_settings
   - viewsreference:viewsreference
-  # Comune Profile
-  - comune_profile:taxonomies
-  - comune_profile:media_types
-  - comune_profile:accesso_al_servizio
-  - comune_profile:core
-  - comune_profile:dataset
-  - comune_profile:documento_pubblico
-  - comune_profile:evento
-  - comune_profile:faq
-  - comune_profile:incarico
-  - comune_profile:luogo
-  - comune_profile:notizia
-  - comune_profile:pagina
-  - comune_profile:persona
-  - comune_profile:punto_di_contatto
-  - comune_profile:servizio
-  - comune_profile:site
-  - comune_profile:sito_tematico
-  - comune_profile:unita_organizzativa
-  - comune_profile:user
   # Comune
   - scaenographia:bi_calendar
   - scaenographia:bi_contacts
@@ -178,6 +158,26 @@ install:
   - bootstrap_italia:bootstrap_italia_paragraph_timeline
   - bootstrap_italia:bootstrap_italia_text_editor2
   - bootstrap_italia:bootstrap_italia_views_carousel
+  # Comune Profile
+  - comune_profile:user
+  - comune_profile:taxonomies
+  - comune_profile:media_types
+  - comune_profile:accesso_al_servizio
+  - comune_profile:core
+  - comune_profile:dataset
+  - comune_profile:documento_pubblico
+  - comune_profile:evento
+  - comune_profile:faq
+  - comune_profile:incarico
+  - comune_profile:luogo
+  - comune_profile:notizia
+  - comune_profile:pagina
+  - comune_profile:persona
+  - comune_profile:punto_di_contatto
+  - comune_profile:servizio
+  - comune_profile:site
+  - comune_profile:sito_tematico
+  - comune_profile:unita_organizzativa
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
