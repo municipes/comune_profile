@@ -1,1 +1,3 @@
-true
+excluded:
+  - backup_migrate.backup_migrate_source.entire_site
+required: true

@@ -3,22 +3,15 @@ description: 'Provides Dataset tipo di contenuto and related configuration. Stru
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - datetime
-  - entity_reference_revisions
-  - field
-  - file
-  - image
-  - language
-  - media
-  - media_library
-  - menu_ui
-  - node
-  - paragraphs
-  - path
-  - pathauto
-  - taxonomy
-  - text
-  - type_tray
-  - ui_patterns_field_formatters
-  - user
-  - views
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:media'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:text'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'paragraphs:paragraphs'
+  - 'pathauto:pathauto'
+  - 'type_tray:type_tray'
+version: 1.0.0

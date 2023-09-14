@@ -3,13 +3,14 @@ description: 'Provides Appuntamento tipo di contenuto and related configuration.
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - datetime
-  - field
-  - language
-  - menu_ui
-  - node
-  - path
-  - text
-  - type_tray
-  - ui_patterns_field_formatters
-  - user
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'type_tray:type_tray'
+  - 'ui_patterns_field_formatters:ui_patterns_field_formatters'
+version: 1.0.0

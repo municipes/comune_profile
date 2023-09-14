@@ -3,15 +3,15 @@ description: 'Provides Faq tipo di contenuto and related configuration. Domande 
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - field
-  - language
-  - menu_ui
-  - node
-  - path
-  - search_api
-  - search_api_db
-  - system
-  - text
-  - type_tray
-  - user
-  - views
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:system'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'search_api:search_api'
+  - 'type_tray:type_tray'
+version: 1.0.0

@@ -3,18 +3,15 @@ description: 'Provides Documento pubblico tipo di contenuto and related configur
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - datetime
-  - entity_reference_revisions
-  - field
-  - file
-  - language
-  - media_library
-  - node
-  - paragraphs
-  - path
-  - pathauto
-  - taxonomy
-  - text
-  - ui_patterns_field_formatters
-  - user
-  - viewsreference
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:file'
+  - 'drupal:language'
+  - 'drupal:node'
+  - 'drupal:taxonomy'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'pathauto:pathauto'
+  - 'viewsreference:viewsreference'
+version: 1.0.0

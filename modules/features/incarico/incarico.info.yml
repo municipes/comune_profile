@@ -3,14 +3,13 @@ description: 'Provides Incarico tipo di contenuto and related configuration. Que
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - datetime
-  - field
-  - language
-  - menu_ui
-  - node
-  - path
-  - pathauto
-  - taxonomy
-  - text
-  - type_tray
-  - user
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:taxonomy'
+  - 'drupal:text'
+  - 'pathauto:pathauto'
+  - 'type_tray:type_tray'
+version: 1.0.0

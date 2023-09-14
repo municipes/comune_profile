@@ -3,21 +3,19 @@ description: 'Provides Luogo tipo di contenuto and related configuration. Tipolo
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - address
-  - entity_reference_revisions
-  - field
-  - geocoder_field
-  - geofield
-  - inline_entity_form
-  - language
-  - leaflet
-  - media_library
-  - menu_ui
-  - node
-  - path
-  - pathauto
-  - taxonomy
-  - text
-  - type_tray
-  - ui_patterns_field_formatters
-  - user
+  - 'address:address'
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:taxonomy'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'geocoder:geocoder_field'
+  - 'geofield:geofield'
+  - 'leaflet:leaflet'
+  - 'pathauto:pathauto'
+  - 'type_tray:type_tray'
+  - 'ui_patterns_field_formatters:ui_patterns_field_formatters'
+version: 1.0.0

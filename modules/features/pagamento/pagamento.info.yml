@@ -3,11 +3,12 @@ description: 'Provides Pagamento tipo di contenuto and related configuration. â€
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - datetime
-  - field
-  - language
-  - link
-  - menu_ui
-  - node
-  - text
-  - type_tray
+  - 'drupal:datetime'
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:link'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:text'
+  - 'type_tray:type_tray'
+version: 1.0.0

@@ -3,17 +3,16 @@ description: "Provides Unità organizzativa tipo di contenuto and related config
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - field
-  - inline_entity_form
-  - language
-  - media_library
-  - menu_ui
-  - node
-  - path
-  - pathauto
-  - taxonomy
-  - text
-  - type_tray
-  - ui_patterns_field_formatters
-  - user
-  - viewsreference
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:media_library'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'inline_entity_form:inline_entity_form'
+  - 'pathauto:pathauto'
+  - 'type_tray:type_tray'
+  - 'viewsreference:viewsreference'
+version: 1.0.0

@@ -102,7 +102,7 @@ function comune_profile_install() {
   // Import node
   comune_profile_execute_migrations(['node_common']);
   // Import menu
-  comune_execute_migrations(['menu_common']);
+  comune_profile_execute_migrations(['menu_common']);
 
 
   \Drupal::configFactory()->getEditable('migrate_plus.migration.block_common')->delete();

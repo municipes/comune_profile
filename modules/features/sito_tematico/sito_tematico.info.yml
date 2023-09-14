@@ -3,12 +3,11 @@ description: 'Provides Sito Tematico tipo di contenuto and related configuration
 type: module
 core_version_requirement: '^9.4 || ^10'
 dependencies:
-  - field
-  - language
-  - link
-  - media_library
-  - menu_ui
-  - node
-  - taxonomy
-  - type_tray
-  - user
+  - 'drupal:field'
+  - 'drupal:language'
+  - 'drupal:link'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:user'
+  - 'type_tray:type_tray'
+version: 1.0.0

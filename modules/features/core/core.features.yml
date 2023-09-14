@@ -1,1 +1,5 @@
-true
+excluded:
+  - core.menu.static_menu_link_overrides
+  - media.type.logo_content_type
+  - paragraphs.paragraphs_type.node_reference
+required: true

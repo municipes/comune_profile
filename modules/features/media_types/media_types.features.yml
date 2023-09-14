@@ -1,0 +1,16 @@
+required:
+  - field.field.media.dataset.field_media_file
+  - field.field.paragraph.dataset.field_dataset
+  - media.type.audio
+  - media.type.dataset
+  - media.type.document
+  - media.type.image
+  - media.type.image_svg
+  - media.type.remote_video
+  - media.type.video
+  - core.entity_form_display.media.dataset.default
+  - core.entity_form_display.media.dataset.media_library
+  - core.entity_form_display.paragraph.dataset.default
+  - core.entity_view_display.media.dataset.default
+  - core.entity_view_display.media.dataset.media_library
+  - core.entity_view_display.paragraph.dataset.default
