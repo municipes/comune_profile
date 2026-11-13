@@ -1,7 +1,7 @@
 name: Servizio
 description: 'Provides Servizio tipo di contenuto and related configuration. Struttura delle informazioni relative a un servizio pubblico, funzionale alla creazione di una scheda servizio'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:field'
   - 'drupal:language'

@@ -1,7 +1,7 @@
 name: Dataset
 description: 'Provides Dataset tipo di contenuto and related configuration. Struttura delle informazioni relative utili a presentare un Dataset'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:datetime'
   - 'drupal:field'

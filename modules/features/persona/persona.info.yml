@@ -1,7 +1,7 @@
 name: 'Persona pubblica'
 description: 'Provides Persona pubblica tipo di contenuto and related configuration. Questa Tipologia descrive la struttura delle persone pubbliche che sono salienti per il dominio (sito di un comune), funzionale alla creazione di una scheda persona.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'auto_entitylabel:auto_entitylabel'
   - 'drupal:field'

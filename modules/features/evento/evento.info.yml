@@ -1,7 +1,7 @@
 name: Evento
 description: 'Provides Evento tipo di contenuto and related configuration. Tipologia che struttura le informazioni relative a un evento di interesse pubblico pubblicato sul sito di un comune.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:datetime'
   - 'drupal:field'

@@ -1,7 +1,7 @@
 name: Pagina
 description: 'Provides Pagina tipo di contenuto and related configuration. Pagina componibile con i paragrafi.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:field'
   - 'drupal:language'

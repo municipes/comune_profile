@@ -1,7 +1,7 @@
 name: Notizia
 description: 'Provides Notizia tipo di contenuto and related configuration. Tipologia che struttura le informazioni relative agli aggiornamenti d un comune.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:datetime'
   - 'drupal:field'

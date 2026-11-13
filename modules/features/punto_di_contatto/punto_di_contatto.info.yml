@@ -1,7 +1,7 @@
 name: 'Punto di contatto'
 description: 'Provides Punto di contatto tipo di contenuto and related configuration. Questa Tipologia descrive la struttura di un punto di contatto, che può essere fisico, virtuale o digitale.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:field'
   - 'drupal:language'

@@ -1,7 +1,7 @@
 name: Pagamento
 description: 'Provides Pagamento tipo di contenuto and related configuration. “Content type utile per l’ implementazione dell’AREA RISERVATA”'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:datetime'
   - 'drupal:field'

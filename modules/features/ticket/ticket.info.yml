@@ -1,7 +1,7 @@
 name: Ticket
 description: 'Provides Ticket tipo di contenuto and related configuration. Ticket di richiesta assistenza.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'drupal:field'
   - 'drupal:menu_ui'

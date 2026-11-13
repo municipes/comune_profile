@@ -1,7 +1,7 @@
 name: Luogo
 description: 'Provides Luogo tipo di contenuto and related configuration. Tipologia che struttura le informazioni relative a un luogo di interesse pubblico.'
 type: module
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - 'address:address'
   - 'drupal:field'
